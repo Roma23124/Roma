@@ -1,36 +1,46 @@
 a=500
 b=500
+g=500
+d=600
+f=400
+h=500
+r=475
+y=350
 napr="niz"
 def setup():
     size(1000,1000)
     frameRate(60)
 def draw():
-    global napr,a,b
+    global a,b,g,d,r,y,f,h
     clear()
     ellipse(b,a,200,200)
-    rect(400,400,100,100)
-    rect(800,400,100,100)
-    rect(600,600,100,100)
-    rect(600,200,100,100)
-    if napr == "a":
-        b-=1
-    if napr == "s":
-        b+=1
-    if napr =="w":
-        a+=1
-    if napr =="d":
-        a-=1
-def mouseClicked():
-    global napr,a,b
-    if mouseX > 400 and mouseX <500 and mouseY >400 and mouseY <500:
-        napr="a"
-    if mouseX > 800 and mouseX <900 and mouseY >400 and mouseY <500:
-        napr="s"
-    if mouseX > 600 and mouseX <700 and mouseY >600 and mouseY <700:
-        napr="w"
-    if mouseX > 600 and mouseX <700 and mouseY >200 and mouseY <300:
-        napr="d"  
-
+    ellipse(d,g,100,300)
+    ellipse(f,h,100,300)
+    rect(r,y,50,300)
+    if keyPressed:
+        if key == "s":
+           a+=1
+    if keyPressed:
+        if key == "w":
+           a-=1      
+    if keyPressed:
+        if key == "d":
+           b+=1
+    if keyPressed:
+        if key == "a":
+           b-=1 
+           #             
+        if key == "s":
+           g+=1
+    if keyPressed:
+        if key == "w":
+           g-=1      
+    if keyPressed:
+        if key == "d":
+           d+=1
+    if keyPressed:
+        if key == "a":
+           d-=1            
     
 
     
